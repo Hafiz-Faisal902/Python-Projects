@@ -1,4 +1,5 @@
 from Programs.Calculator.main import Calculator
+from Programs.Guess_Number.main import Guess_Number
 
 while True:
     print("\n--- Main Menu ---")
@@ -14,6 +15,9 @@ while True:
 
     elif userplay == "calculator":
         Calculator()
+
+    elif userplay == "guess number":
+        Guess_Number()
 
     else:
         print("Game not found. Please choose a valid option from the menu or type help.")
