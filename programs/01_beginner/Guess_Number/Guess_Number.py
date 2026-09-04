@@ -4,7 +4,9 @@ import random
 def Guess_Number():
 
     Guessnum = random.randint(1, 50)
-    print("\n===== Welcome to the Guess Number Game! =====")
+    print("=" * 40)
+    print("Welcome to the Guess Number Game!")
+    print("=" * 40)
         
     while True:
         try:

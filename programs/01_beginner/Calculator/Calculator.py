@@ -1,5 +1,7 @@
 def Calculator():
-    print("\n===== Welcome to the Calculator! =====")
+    print("=" * 40)
+    print("Welcome to the Calculator!")
+    print("=" * 40)
     while True:
         num1 = int(input("Enter first number: "))
         num2 = int(input("Enter second number: "))

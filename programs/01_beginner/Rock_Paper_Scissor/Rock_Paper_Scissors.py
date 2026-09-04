@@ -2,7 +2,9 @@ import random
 
 def RPS():
     choices = ["rock", "paper", "scissors"]
-    print("\n===== Rock Paper Scissors Game =====")
+    print("=" * 40)
+    print("Welcome to Rock Paper Scissors!")
+    print("=" * 40)
     while True:
         computer_choice = random.choice(choices)
         user_choice = input("Enter rock, paper, or scissors: ").strip().lower()
