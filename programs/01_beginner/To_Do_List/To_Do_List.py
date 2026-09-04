@@ -8,6 +8,8 @@ def show_tasks(tasks):
         return
 
     print("\n===== Your Tasks =====")
+    # enumerate(tasks, start=1) gives us a 1-based counter alongside each
+    # task, so the list prints as "1. Buy milk" instead of starting at 0.
     for number, task in enumerate(tasks, start=1):
         print(f"{number}. {task}")
 
@@ -20,6 +22,9 @@ def add_task(tasks):
         print("Task cannot be empty.")
         return
 
+    # Lists are mutable, so .append() changes `tasks` in place - there's
+    # no need to return anything here, because Python passes the list by
+    # reference and the caller's list is updated directly.
     tasks.append(task)
     print("Task added.")
 
@@ -42,12 +47,20 @@ def complete_task(tasks):
         print("Task number is out of range.")
         return
 
+    # The numbers shown to the user start at 1, but list indexes start at
+    # 0, so we subtract 1 to line them up. .pop() removes the item from
+    # the list AND returns it, which is why we can capture it into
+    # `completed` in the same line.
     completed = tasks.pop(task_number - 1)
     print(f"Completed: {completed}")
 
 
 def main():
     """Run the to-do list application."""
+    # Keeping tasks in a plain list means everything is lost when the
+    # program closes. That's fine for now - saving to a file (so tasks
+    # survive a restart) is exactly the kind of thing a later,
+    # file-handling project in this repo will add.
     tasks = []
 
     while True:
@@ -59,6 +72,9 @@ def main():
 
         choice = input("Choose an option: ").strip().lower()
 
+        # Using a set like {"1", "add"} lets either the menu number or a
+        # typed word trigger the same action - a bit more forgiving than
+        # requiring an exact match.
         if choice in {"1", "add"}:
             add_task(tasks)
         elif choice in {"2", "view", "list"}:
@@ -70,4 +86,3 @@ def main():
             break
         else:
             print("Invalid choice. Please choose 1-4.")
-

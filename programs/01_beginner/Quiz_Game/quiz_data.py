@@ -1,3 +1,30 @@
+"""
+Question bank for the Quiz Game.
+
+This file is pure data on purpose - no game logic lives here, so adding a
+new category or question never means touching game.py.
+
+Shape of the data:
+    quiz_categories = {
+        "<category number as a string>": {
+            "name": "<category display name>",
+            "questions": [
+                {
+                    "question": "<the question text>",
+                    "options": ["\\nA. ...", "\\nB. ...", "\\nC. ...", "\\nD. ..."],
+                    "answer": "<the correct letter, e.g. 'B'>",
+                },
+                ...
+            ],
+        },
+        ...
+    }
+
+Want to add your own category? Copy one of the blocks below, give it the
+next free number as its key, and game.py will pick it up automatically -
+nothing else needs to change.
+"""
+
 quiz_categories = {
     "1": {
         "name": "Python Basics",

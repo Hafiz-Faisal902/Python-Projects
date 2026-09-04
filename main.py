@@ -1,6 +1,26 @@
+"""
+Central launcher for the Python Projects repo.
+
+Instead of a normal `import` for every mini project, this file uses
+importlib.import_module() and passes the module path in as a plain
+string. That's not just a style choice - it's actually required here,
+because the folder is named "01_beginner", and a name that starts with a
+digit is not a valid Python identifier. You genuinely cannot write
+`from programs.01_beginner.Calculator import Calculator` - the parser
+throws a SyntaxError before your code even runs, because it tries to read
+"01" as the start of a number.
+
+importlib.import_module() sidesteps that completely, because it takes the
+path as a *string*, built at runtime, instead of literal syntax the
+parser has to validate. Strings can contain whatever characters they want.
+"""
+
 import importlib
 
-
+# getattr(module, "name") does the same job as module.name, just
+# dynamically. Each line below imports one project's module, then
+# immediately grabs the single function (or class) that actually starts
+# it, storing it under a short, friendly name.
 Calculator = getattr(importlib.import_module("programs.01_beginner.Calculator.Calculator"), "Calculator")
 Guess_Number = getattr(importlib.import_module("programs.01_beginner.Guess_Number.Guess_Number"), "Guess_Number")
 RPS = getattr(importlib.import_module("programs.01_beginner.Rock_Paper_Scissor.Rock_Paper_Scissors"), "RPS")
@@ -8,6 +28,10 @@ To_Do_List = getattr(importlib.import_module("programs.01_beginner.To_Do_List.To
 run_quiz = getattr(importlib.import_module("programs.01_beginner.Quiz_Game.game"), "run_quiz")
 
 
+# The main menu loop. while True keeps showing the menu until the user
+# types "exit" (or hits Ctrl+C). Picking a number just calls that
+# project's own function - control comes back here once that project's
+# own loop finishes.
 while True:
     print("\n===== Main Menu =====")
     print("Available options:")

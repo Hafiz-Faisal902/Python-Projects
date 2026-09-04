@@ -1,6 +1,6 @@
 # To-Do List
 
-A small command-line to-do list built as **Project #4** in the Python Projects roadmap.
+A small command-line to-do list. **Project #4** in the beginner track.
 
 ## What it does
 
@@ -8,10 +8,12 @@ The program lets you:
 
 - Add tasks
 - View current tasks
-- Complete tasks
+- Complete tasks (which removes them from the list)
 - Exit the program
 
-Tasks are kept in memory while the program is running. They are intentionally **not saved to a file yet**; persistent storage will be introduced in a later project when file handling becomes part of the learning progression.
+Every menu option also accepts a plain word instead of the number — `add`, `view`, `complete`, `exit` all work, not just `1`–`4`.
+
+Tasks are kept in memory while the program is running. They are intentionally **not saved to a file yet** — persistent storage gets introduced later, once file handling is part of the learning progression. Restart the program and the list is gone; that's expected for now, not a bug.
 
 ## Concepts practiced
 
@@ -25,18 +27,19 @@ Tasks are kept in memory while the program is running. They are intentionally **
 - `try` / `except`
 - `enumerate()`
 
-## Run
+## Run it
 
-From the repository root:
-
-```bash
-python programs/01_beginner/To_Do_List/main.py
-```
-
-Or use the central launcher:
+From inside this folder:
 
 ```bash
 python main.py
+```
+
+Or from the repo root, through the launcher:
+
+```bash
+python main.py
+# then choose option 4
 ```
 
 ## Example
@@ -47,5 +50,29 @@ python main.py
 2. View tasks
 3. Complete task
 4. Exit
-Choose an option:
+Choose an option: add
+Enter a task: Finish the To-Do List README
+Task added.
+
+===== To-Do List =====
+1. Add task
+2. View tasks
+3. Complete task
+4. Exit
+Choose an option: view
+
+===== Your Tasks =====
+1. Finish the To-Do List README
+
+===== To-Do List =====
+1. Add task
+2. View tasks
+3. Complete task
+4. Exit
+Choose an option: complete
+
+===== Your Tasks =====
+1. Finish the To-Do List README
+Enter the task number to complete: 1
+Completed: Finish the To-Do List README
 ```
