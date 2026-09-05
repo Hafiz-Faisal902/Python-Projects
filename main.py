@@ -26,6 +26,7 @@ Guess_Number = getattr(importlib.import_module("programs.01_beginner.Guess_Numbe
 RPS = getattr(importlib.import_module("programs.01_beginner.Rock_Paper_Scissor.Rock_Paper_Scissors"), "RPS")
 To_Do_List = getattr(importlib.import_module("programs.01_beginner.To_Do_List.To_Do_List"), "main")
 run_quiz = getattr(importlib.import_module("programs.01_beginner.Quiz_Game.game"), "run_quiz")
+generate_password = getattr(importlib.import_module("programs.01_beginner.Password_Generator.Password_Generator"), "main")
 
 
 # The main menu loop. while True keeps showing the menu until the user
@@ -40,6 +41,7 @@ while True:
     print("3. Rock Paper Scissors")
     print("4. To Do List")
     print("5. Quiz Game")
+    print("6. Password Generator")
     print("Exit or Help for more options.")
     userplay = input("Which game do you want to play? ").strip().lower()
 
@@ -50,7 +52,7 @@ while True:
 
     elif userplay == "help":
         print("\n===== Help Menu =====")
-        print("Available options: Calculator, Guess Number, Rock Paper Scissors, To Do List, Quiz Game, Exit, Help")
+        print("Available options: Calculator, Guess Number, Rock Paper Scissors, To Do List, Quiz Game, Password Generator, Exit, Help")
         print("Type the name of the game you want to play or 'exit' to quit.")
         print("You can also play any specific game by going in the directory.")
 
@@ -73,6 +75,10 @@ while True:
     elif userplay == "5":
         print("Starting the Quiz Game...")
         run_quiz()
+
+    elif userplay == "6":
+        print("Starting the Password Generator...")
+        generate_password()
 
     else:
         print("Game not found. Please choose a valid option from the menu or type help.")

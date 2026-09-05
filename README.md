@@ -16,7 +16,8 @@ Python-Projects/
         ├── Guess_Number/
         ├── Rock_Paper_Scissor/
         ├── To_Do_List/
-        └── Quiz_Game/
+        ├── Quiz_Game/
+        └── Password_Generator/
 ```
 
 Every project folder is self-contained: its own game/logic file, its own `main.py` to run it, and its own `README.md` explaining what it does and what it's practicing. `programs/01_beginner/` is the only tier that exists right now — it's Phase 1. More folders (`02_beginner-intermediate`, `03_intermediate`, and so on) will show up as I actually get there, not before. I'd rather the repo reflect what's really built than promise a roadmap I haven't earned yet.
@@ -36,7 +37,7 @@ cd programs/01_beginner/Quiz_Game
 python main.py
 ```
 
-No installs, no virtual environment, no `requirements.txt` — everything here so far only uses Python's standard library (`random`, mainly). That'll change once I start doing anything with APIs or file parsing, and I'll update this when it does.
+No installs, no virtual environment, no `requirements.txt` — everything here so far only uses Python's standard library (`random`, `secrets`, `string`). That'll change once I start doing anything with APIs or file parsing, and I'll update this when it does.
 
 ## The projects so far
 
@@ -47,6 +48,7 @@ No installs, no virtual environment, no `requirements.txt` — everything here s
 | 3 | [Rock Paper Scissors](programs/01_beginner/Rock_Paper_Scissor) | You vs. the computer, best of however-many-rounds you want |
 | 4 | [To-Do List](programs/01_beginner/To_Do_List) | Add, view, and complete tasks (in-memory only, for now) |
 | 5 | [Quiz Game](programs/01_beginner/Quiz_Game) | Multi-category trivia — 20 categories, random question order, scored |
+| 6 | [Password Generator](programs/01_beginner/Password_Generator) | Random passwords with selectable character types, built with `secrets` |
 
 Each link goes to that project's own README with more detail on how it works and what it's teaching me.
 
