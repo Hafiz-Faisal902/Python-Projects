@@ -27,6 +27,7 @@ RPS = getattr(importlib.import_module("programs.01_beginner.Rock_Paper_Scissor.R
 To_Do_List = getattr(importlib.import_module("programs.01_beginner.To_Do_List.To_Do_List"), "main")
 run_quiz = getattr(importlib.import_module("programs.01_beginner.Quiz_Game.game"), "run_quiz")
 generate_password = getattr(importlib.import_module("programs.01_beginner.Password_Generator.Password_Generator"), "main")
+start_countdown = getattr(importlib.import_module("programs.01_beginner.Countdown_Timer.Countdown_Timer"), "main")
 
 
 # The main menu loop. while True keeps showing the menu until the user
@@ -42,6 +43,7 @@ while True:
     print("4. To Do List")
     print("5. Quiz Game")
     print("6. Password Generator")
+    print("7. Countdown Timer")
     print("Exit or Help for more options.")
     userplay = input("Which game do you want to play? ").strip().lower()
 
@@ -52,7 +54,7 @@ while True:
 
     elif userplay == "help":
         print("\n===== Help Menu =====")
-        print("Available options: Calculator, Guess Number, Rock Paper Scissors, To Do List, Quiz Game, Password Generator, Exit, Help")
+        print("Available options: Calculator, Guess Number, Rock Paper Scissors, To Do List, Quiz Game, Password Generator, Countdown Timer, Exit, Help")
         print("Type the name of the game you want to play or 'exit' to quit.")
         print("You can also play any specific game by going in the directory.")
 
@@ -79,6 +81,10 @@ while True:
     elif userplay == "6":
         print("Starting the Password Generator...")
         generate_password()
+
+    elif userplay == "7":
+        print("Starting the Countdown Timer...")
+        start_countdown()
 
     else:
         print("Game not found. Please choose a valid option from the menu or type help.")

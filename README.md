@@ -17,7 +17,8 @@ Python-Projects/
         ├── Rock_Paper_Scissor/
         ├── To_Do_List/
         ├── Quiz_Game/
-        └── Password_Generator/
+        ├── Password_Generator/
+        └── Countdown_Timer/
 ```
 
 Every project folder is self-contained: its own game/logic file, its own `main.py` to run it, and its own `README.md` explaining what it does and what it's practicing. `programs/01_beginner/` is the only tier that exists right now — it's Phase 1. More folders (`02_beginner-intermediate`, `03_intermediate`, and so on) will show up as I actually get there, not before. I'd rather the repo reflect what's really built than promise a roadmap I haven't earned yet.
@@ -49,6 +50,7 @@ No installs, no virtual environment, no `requirements.txt` — everything here s
 | 4 | [To-Do List](programs/01_beginner/To_Do_List) | Add, view, and complete tasks (in-memory only, for now) |
 | 5 | [Quiz Game](programs/01_beginner/Quiz_Game) | Multi-category trivia — 20 categories, random question order, scored |
 | 6 | [Password Generator](programs/01_beginner/Password_Generator) | Random passwords with selectable character types, built with `secrets` |
+| 7 | [Countdown Timer](programs/01_beginner/Countdown_Timer) | Real-time minutes:seconds countdown, redrawn in place each second |
 
 Each link goes to that project's own README with more detail on how it works and what it's teaching me.
 
