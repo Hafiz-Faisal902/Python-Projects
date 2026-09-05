@@ -87,6 +87,7 @@ def generate_password(length: int, pool: str) -> str:
 
 def main() -> None:
     """Run the password generator application."""
+    print("")
     print("=" * 40)
     print("Welcome to the Password Generator!")
     print("=" * 40)
@@ -96,6 +97,7 @@ def main() -> None:
         pool = get_character_pool()
         password = generate_password(length, pool)
 
+        print("\nGenerating Password...")
         print(f"\nYour generated password:\n{password}\n")
 
         choice = input("Generate another password? (yes/no): ").strip().lower()
